@@ -26,3 +26,6 @@ public class frequancyString{
 
 	}
 }
+/* used the hash map to count the frequancy of words in the array,
+if word is not present in the map , it is added
+if present the its count is incremented*/
