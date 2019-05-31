@@ -1,0 +1,28 @@
+import java.util.*;
+public class frequancyString{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt(); //size of array
+		String arr[]=new String[n];
+		int i=0;
+		while(i<n){
+			arr[i]=sc.next();
+			i++;
+		}
+		HashMap<String,Integer> hash=new HashMap<>();
+
+		i=0;
+		while(i<n){
+			if(hash.containsKey(arr[i])){
+				int value=(hash.get(arr[i])).intValue()+1;
+				hash.put(arr[i],new Integer(value));
+			}else{
+				hash.put(arr[i],new Integer(1));
+			}
+			i++;
+		}
+		
+		hash.forEach((k,v)->System.out.println(k+" - "+v));
+
+	}
+}
